@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 90,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+  }
+
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    background: linear-gradient(rgb(121, 169, 224), rgb(15, 85, 79));
+    height: 100vh;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.testimonial-wrapper {
+    background-color: rgb(188, 200, 221);
+    width: 80vw;
+    padding: 0 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    position: relative;
+    height: 400px;
+}
+
+span.material-symbols-outlined {
+    font-size: 4em;
+    color: rgb(37, 47, 56);
+    margin: 1em 0 -0.1em 0;
+}
+
+
+
+.testimonial-text {
+    line-height: 2em;
+    text-align: center;
+    margin: 20px;
+    font-style: italic;
+}
+
+.testimonial-user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    object-fit: cover; 
+    flex-direction: row;
+    margin: 0 0 50px 0;
+}
+
+.user-details {
+    margin: 0 0 0 20px;
+}
+
+.user-img {
+    border-radius: 10px;
+    height: 5em;
+    width: 5em;
+}
+
+.user-name {
+    font-weight: 600;
+}
+
+.user-role {
+    margin: -10px 0 0 0;
+}
+
+.progress-bar {
+    position: absolute;
+    background-color: rgb(37, 47, 56);
+    width: 80vw;
+    height: 2em;
+    padding: 0;
+    border-radius: 5px;
+    transform: scaleX(0.06);
+    
+}
+
+.top.progress-bar {
+    animation: shrinktoleft 10s linear infinite;
+    transform-origin: left;
+    top: 0;
+    
+}
+
+.bottom.progress-bar {
+    animation: shrinktoright 10s linear infinite;
+    transform-origin: right;
+    bottom: 0;
+}
+
+.left.progress-bar {
+    transform-origin: left;
+    left:16px;
+    top:-16px;
+    width: 400px;
+    background-color: rgb(25, 109, 109);
+    transform: rotate(90deg);
+    animation: shrinktotop 10s linear infinite;
+}
+
+.right.progress-bar {
+    transform-origin: right;
+    right:16px;
+    bottom:-16px;
+    width:400px;
+    background-color: rgb(25, 109, 109);
+    transform: rotate(90deg);
+    animation: shrinktobottom 10s linear infinite;
+}
+
+@keyframes shrinktoleft {
+    0% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes shrinktoright {
+    0% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes shrinktotop {
+    0% {
+        transform: scaleX(1) rotate(90deg);
+    }
+    100% {
+        transform: scaleY(0.08) rotate(90deg);
+    }
+}
+
+@keyframes shrinktobottom {
+    0% {
+        transform: scaleX(1) rotate(90deg);
+        
+    }
+    100% {
+        transform: scaleY(0.08) rotate(90deg);
+    }
+}
